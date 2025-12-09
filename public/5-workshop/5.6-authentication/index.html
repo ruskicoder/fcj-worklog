@@ -12,24 +12,24 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title> :: Internship Report</title>
+    <title>Authentication Service :: Internship Report</title>
 
     
-    <link href="../../css/nucleus.css?1765296853" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1765296853" rel="stylesheet">
-    <link href="../../css/hybrid.css?1765296853" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1765296853" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1765296853" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1765296853" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1765296853" rel="stylesheet">
-    <link href="../../css/theme.css?1765296853" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1765296853" rel="stylesheet">
+    <link href="../../css/nucleus.css?1765297079" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1765297079" rel="stylesheet">
+    <link href="../../css/hybrid.css?1765297079" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1765297079" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1765297079" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1765297079" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1765297079" rel="stylesheet">
+    <link href="../../css/theme.css?1765297079" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1765297079" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1765296853" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1765297079" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1765296853"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1765297079"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -88,14 +88,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1765296853"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1765296853"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1765297079"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1765297079"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1765296853"></script>
+<script type="text/javascript" src="../../js/search.js?1765297079"></script>
  
   </div>
 
@@ -687,6 +687,60 @@
     
             
 <li
+  data-nav-id="/5-workshop/5.6-authentication/"
+  title="Authentication Service"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="../../5-workshop/5.6-authentication/">
+     <b> 5.6. </b> Authentication Service 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.7-backend-services/"
+  title="Backend Services"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../5-workshop/5.7-backend-services/">
+     <b> 5.7. </b> Backend Services 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.8-frontend/"
+  title="Frontend Development"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../5-workshop/5.8-frontend/">
+     <b> 5.8. </b> Frontend Development 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
   data-nav-id="/5-workshop/5.9-deployment/"
   title="Deployment"
   class="dd-item 
@@ -715,24 +769,6 @@
 >
   <a href="../../5-workshop/5.11-cleanup/">
      <b> 5.11. </b> Cleanup 
-    <i class="fas fa-check read-icon"></i>
-    
-  </a>
-   
-</li>
-    
-            
-<li
-  data-nav-id="/5-workshop/5.6-authentication/"
-  title=""
-  class="dd-item 
-        
-        active
-        
-        "
->
-  <a href="../../5-workshop/5.6-authentication/">
-     
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -921,7 +957,7 @@
             
           
           
-            <a href='../../'>Internship Report</a> > <a href='../../5-workshop/'>Workshop</a> > 
+            <a href='../../'>Internship Report</a> > <a href='../../5-workshop/'>Workshop</a> > Authentication Service
           
         
           
@@ -933,7 +969,27 @@
                 </div>
                 
                     <div class="progress">
-  <div class="wrapper"><nav id="TableOfContents"></nav></div>
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#authentication-service-setup">Authentication Service Setup</a>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#step-1-create-cognito-user-pool">Step 1: Create Cognito User Pool</a></li>
+        <li><a href="#step-2-configure-cognito-for-development">Step 2: Configure Cognito for Development</a></li>
+        <li><a href="#step-3-create-login-lambda-function">Step 3: Create Login Lambda Function</a></li>
+        <li><a href="#step-4-create-registration-lambda-function">Step 4: Create Registration Lambda Function</a></li>
+        <li><a href="#step-5-create-api-gateway-endpoints">Step 5: Create API Gateway Endpoints</a></li>
+        <li><a href="#step-6-enable-cors">Step 6: Enable CORS</a></li>
+        <li><a href="#step-7-deploy-api">Step 7: Deploy API</a></li>
+        <li><a href="#step-8-test-authentication">Step 8: Test Authentication</a></li>
+        <li><a href="#authentication-flow-summary">Authentication Flow Summary</a></li>
+        <li><a href="#security-best-practices">Security Best Practices</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#next-steps">Next Steps</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 </div>
 
                 
@@ -948,7 +1004,7 @@
           
             <h1>
               
-              
+              Authentication Service
             </h1>
           
 
@@ -956,7 +1012,558 @@
 
 
 
-	
+	<h2 id="authentication-service-setup">Authentication Service Setup</h2>
+<p>This section covers setting up AWS Cognito for user authentication and implementing authentication Lambda functions.</p>
+<h3 id="overview">Overview</h3>
+<p>The authentication system includes:</p>
+<ol>
+<li><strong>AWS Cognito User Pool</strong> - User management and authentication</li>
+<li><strong>Login Handler</strong> - Email/password authentication</li>
+<li><strong>Registration Handler</strong> - New user signup</li>
+<li><strong>Google OAuth Handler</strong> - Social login integration</li>
+<li><strong>Password Reset</strong> - Password recovery workflow</li>
+</ol>
+<h3 id="step-1-create-cognito-user-pool">Step 1: Create Cognito User Pool</h3>
+<h4 id="using-aws-console">Using AWS Console</h4>
+<ol>
+<li>
+<p>Navigate to Amazon Cognito</p>
+</li>
+<li>
+<p>Click &ldquo;Create user pool&rdquo;</p>
+</li>
+<li>
+<p>Configure sign-in experience:</p>
+<ul>
+<li>Sign-in options: Email</li>
+<li>User name requirements: Allow email addresses</li>
+<li>Click &ldquo;Next&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>Configure security requirements:</p>
+<ul>
+<li>Password policy: Cognito defaults</li>
+<li>Multi-factor authentication: Optional</li>
+<li>User account recovery: Email only</li>
+<li>Click &ldquo;Next&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>Configure sign-up experience:</p>
+<ul>
+<li>Self-registration: Enabled</li>
+<li>Required attributes: name, email</li>
+<li>Click &ldquo;Next&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>Configure message delivery:</p>
+<ul>
+<li>Email provider: Send email with Cognito</li>
+<li>FROM email address: <a href="mailto:no-reply@verificationemail.com">no-reply@verificationemail.com</a></li>
+<li>Click &ldquo;Next&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>Integrate your app:</p>
+<ul>
+<li>User pool name: <code>insighthr-user-pool</code></li>
+<li>App client name: <code>insighthr-web-client</code></li>
+<li>Client secret: Don&rsquo;t generate</li>
+<li>Authentication flows: ALLOW_USER_PASSWORD_AUTH, ALLOW_REFRESH_TOKEN_AUTH</li>
+<li>Click &ldquo;Next&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>Review and create</p>
+</li>
+</ol>
+<h4 id="using-aws-cli">Using AWS CLI</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create user pool</span>
+</span></span><span style="display:flex;"><span>aws cognito-idp create-user-pool <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --pool-name insighthr-user-pool <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --policies <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;PasswordPolicy&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;MinimumLength&#34;: 8,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;RequireUppercase&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;RequireLowercase&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;RequireNumbers&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;RequireSymbols&#34;: false
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --auto-verified-attributes email <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --username-attributes email <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --schema <span style="color:#e6db74">&#39;[
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;Name&#34;: &#34;email&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;AttributeDataType&#34;: &#34;String&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;Required&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;Mutable&#34;: true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;Name&#34;: &#34;name&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;AttributeDataType&#34;: &#34;String&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;Required&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;Mutable&#34;: true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ]&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get user pool ID</span>
+</span></span><span style="display:flex;"><span>USER_POOL_ID<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>aws cognito-idp list-user-pools <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --max-results <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --query <span style="color:#e6db74">&#34;UserPools[?Name==&#39;insighthr-user-pool&#39;].Id&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --output text <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;User Pool ID: </span>$USER_POOL_ID<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h4 id="create-app-client">Create App Client</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create app client</span>
+</span></span><span style="display:flex;"><span>aws cognito-idp create-user-pool-client <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --user-pool-id $USER_POOL_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --client-name insighthr-web-client <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --no-generate-secret <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --explicit-auth-flows ALLOW_USER_PASSWORD_AUTH ALLOW_REFRESH_TOKEN_AUTH ALLOW_USER_SRP_AUTH <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get client ID</span>
+</span></span><span style="display:flex;"><span>CLIENT_ID<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>aws cognito-idp list-user-pool-clients <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --user-pool-id $USER_POOL_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --query <span style="color:#e6db74">&#34;UserPoolClients[?ClientName==&#39;insighthr-web-client&#39;].ClientId&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --output text <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Client ID: </span>$CLIENT_ID<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h3 id="step-2-configure-cognito-for-development">Step 2: Configure Cognito for Development</h3>
+<p>For development, disable email verification requirement:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Update user pool to auto-verify emails</span>
+</span></span><span style="display:flex;"><span>aws cognito-idp update-user-pool <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --user-pool-id $USER_POOL_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --auto-verified-attributes email <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span></code></pre></div><h3 id="step-3-create-login-lambda-function">Step 3: Create Login Lambda Function</h3>
+<h4 id="create-function-code">Create Function Code</h4>
+<p><strong>auth_login_handler.py</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> botocore.exceptions <span style="color:#f92672">import</span> ClientError
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cognito_client <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;cognito-idp&#39;</span>)
+</span></span><span style="display:flex;"><span>dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#39;dynamodb&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>USER_POOL_ID <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;USER_POOL_ID&#39;</span>]
+</span></span><span style="display:flex;"><span>CLIENT_ID <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;CLIENT_ID&#39;</span>]
+</span></span><span style="display:flex;"><span>USERS_TABLE <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;DYNAMODB_USERS_TABLE&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        body <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(event[<span style="color:#e6db74">&#39;body&#39;</span>])
+</span></span><span style="display:flex;"><span>        email <span style="color:#f92672">=</span> body[<span style="color:#e6db74">&#39;email&#39;</span>]
+</span></span><span style="display:flex;"><span>        password <span style="color:#f92672">=</span> body[<span style="color:#e6db74">&#39;password&#39;</span>]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Authenticate with Cognito</span>
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> cognito_client<span style="color:#f92672">.</span>admin_initiate_auth(
+</span></span><span style="display:flex;"><span>            UserPoolId<span style="color:#f92672">=</span>USER_POOL_ID,
+</span></span><span style="display:flex;"><span>            ClientId<span style="color:#f92672">=</span>CLIENT_ID,
+</span></span><span style="display:flex;"><span>            AuthFlow<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ADMIN_NO_SRP_AUTH&#39;</span>,
+</span></span><span style="display:flex;"><span>            AuthParameters<span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;USERNAME&#39;</span>: email,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;PASSWORD&#39;</span>: password
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Get user attributes</span>
+</span></span><span style="display:flex;"><span>        user_response <span style="color:#f92672">=</span> cognito_client<span style="color:#f92672">.</span>admin_get_user(
+</span></span><span style="display:flex;"><span>            UserPoolId<span style="color:#f92672">=</span>USER_POOL_ID,
+</span></span><span style="display:flex;"><span>            Username<span style="color:#f92672">=</span>email
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Extract user info</span>
+</span></span><span style="display:flex;"><span>        user_attributes <span style="color:#f92672">=</span> {attr[<span style="color:#e6db74">&#39;Name&#39;</span>]: attr[<span style="color:#e6db74">&#39;Value&#39;</span>] 
+</span></span><span style="display:flex;"><span>                          <span style="color:#66d9ef">for</span> attr <span style="color:#f92672">in</span> user_response[<span style="color:#e6db74">&#39;UserAttributes&#39;</span>]}
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Get user from DynamoDB</span>
+</span></span><span style="display:flex;"><span>        table <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(USERS_TABLE)
+</span></span><span style="display:flex;"><span>        db_response <span style="color:#f92672">=</span> table<span style="color:#f92672">.</span>get_item(
+</span></span><span style="display:flex;"><span>            Key<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;userId&#39;</span>: user_attributes[<span style="color:#e6db74">&#39;sub&#39;</span>]}
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        user_data <span style="color:#f92672">=</span> db_response<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Item&#39;</span>, {})
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;headers&#39;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;Content-Type&#39;</span>: <span style="color:#e6db74">&#39;application/json&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span>: <span style="color:#e6db74">&#39;*&#39;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps({
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;tokens&#39;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;accessToken&#39;</span>: response[<span style="color:#e6db74">&#39;AuthenticationResult&#39;</span>][<span style="color:#e6db74">&#39;AccessToken&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;idToken&#39;</span>: response[<span style="color:#e6db74">&#39;AuthenticationResult&#39;</span>][<span style="color:#e6db74">&#39;IdToken&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;refreshToken&#39;</span>: response[<span style="color:#e6db74">&#39;AuthenticationResult&#39;</span>][<span style="color:#e6db74">&#39;RefreshToken&#39;</span>]
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;user&#39;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;userId&#39;</span>: user_attributes[<span style="color:#e6db74">&#39;sub&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;email&#39;</span>: user_attributes[<span style="color:#e6db74">&#39;email&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;name&#39;</span>: user_attributes<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>),
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;role&#39;</span>: user_data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;role&#39;</span>, <span style="color:#e6db74">&#39;Employee&#39;</span>),
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;department&#39;</span>: user_data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;department&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>),
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;employeeId&#39;</span>: user_data<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;employeeId&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> ClientError <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        error_code <span style="color:#f92672">=</span> e<span style="color:#f92672">.</span>response[<span style="color:#e6db74">&#39;Error&#39;</span>][<span style="color:#e6db74">&#39;Code&#39;</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> error_code <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;NotAuthorizedException&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">401</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;headers&#39;</span>: {<span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span>: <span style="color:#e6db74">&#39;*&#39;</span>},
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps({<span style="color:#e6db74">&#39;error&#39;</span>: <span style="color:#e6db74">&#39;Invalid credentials&#39;</span>})
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> error_code <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;UserNotFoundException&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">404</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;headers&#39;</span>: {<span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span>: <span style="color:#e6db74">&#39;*&#39;</span>},
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps({<span style="color:#e6db74">&#39;error&#39;</span>: <span style="color:#e6db74">&#39;User not found&#39;</span>})
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;headers&#39;</span>: {<span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span>: <span style="color:#e6db74">&#39;*&#39;</span>},
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps({<span style="color:#e6db74">&#39;error&#39;</span>: str(e)})
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;headers&#39;</span>: {<span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span>: <span style="color:#e6db74">&#39;*&#39;</span>},
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps({<span style="color:#e6db74">&#39;error&#39;</span>: str(e)})
+</span></span><span style="display:flex;"><span>        }
+</span></span></code></pre></div><h4 id="create-requirementstxt">Create requirements.txt</h4>
+<pre tabindex="0"><code>boto3&gt;=1.26.0
+</code></pre><h4 id="package-and-deploy">Package and Deploy</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create deployment package</span>
+</span></span><span style="display:flex;"><span>mkdir -p lambda/auth/package
+</span></span><span style="display:flex;"><span>cd lambda/auth
+</span></span><span style="display:flex;"><span>pip install -r requirements.txt -t package/
+</span></span><span style="display:flex;"><span>cd package
+</span></span><span style="display:flex;"><span>zip -r ../auth-login-handler.zip .
+</span></span><span style="display:flex;"><span>cd ..
+</span></span><span style="display:flex;"><span>zip -g auth-login-handler.zip auth_login_handler.py
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Deploy Lambda function</span>
+</span></span><span style="display:flex;"><span>aws lambda create-function <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --function-name insighthr-auth-login-handler <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --runtime python3.11 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --role arn:aws:iam::<span style="color:#e6db74">${</span>ACCOUNT_ID<span style="color:#e6db74">}</span>:role/insighthr-lambda-role <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --handler auth_login_handler.lambda_handler <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --zip-file fileb://auth-login-handler.zip <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --timeout <span style="color:#ae81ff">30</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --memory-size <span style="color:#ae81ff">256</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --environment Variables<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        USER_POOL_ID=</span><span style="color:#e6db74">${</span>USER_POOL_ID<span style="color:#e6db74">}</span><span style="color:#e6db74">,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        CLIENT_ID=</span><span style="color:#e6db74">${</span>CLIENT_ID<span style="color:#e6db74">}</span><span style="color:#e6db74">,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        DYNAMODB_USERS_TABLE=insighthr-users-dev
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span></code></pre></div><h3 id="step-4-create-registration-lambda-function">Step 4: Create Registration Lambda Function</h3>
+<p><strong>auth_register_handler.py</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> uuid
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> botocore.exceptions <span style="color:#f92672">import</span> ClientError
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cognito_client <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;cognito-idp&#39;</span>)
+</span></span><span style="display:flex;"><span>dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#39;dynamodb&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>USER_POOL_ID <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;USER_POOL_ID&#39;</span>]
+</span></span><span style="display:flex;"><span>CLIENT_ID <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;CLIENT_ID&#39;</span>]
+</span></span><span style="display:flex;"><span>USERS_TABLE <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;DYNAMODB_USERS_TABLE&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        body <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(event[<span style="color:#e6db74">&#39;body&#39;</span>])
+</span></span><span style="display:flex;"><span>        email <span style="color:#f92672">=</span> body[<span style="color:#e6db74">&#39;email&#39;</span>]
+</span></span><span style="display:flex;"><span>        password <span style="color:#f92672">=</span> body[<span style="color:#e6db74">&#39;password&#39;</span>]
+</span></span><span style="display:flex;"><span>        name <span style="color:#f92672">=</span> body[<span style="color:#e6db74">&#39;name&#39;</span>]
+</span></span><span style="display:flex;"><span>        role <span style="color:#f92672">=</span> body<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;role&#39;</span>, <span style="color:#e6db74">&#39;Employee&#39;</span>)
+</span></span><span style="display:flex;"><span>        department <span style="color:#f92672">=</span> body<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;department&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>        employee_id <span style="color:#f92672">=</span> body<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;employeeId&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Create user in Cognito</span>
+</span></span><span style="display:flex;"><span>        cognito_response <span style="color:#f92672">=</span> cognito_client<span style="color:#f92672">.</span>sign_up(
+</span></span><span style="display:flex;"><span>            ClientId<span style="color:#f92672">=</span>CLIENT_ID,
+</span></span><span style="display:flex;"><span>            Username<span style="color:#f92672">=</span>email,
+</span></span><span style="display:flex;"><span>            Password<span style="color:#f92672">=</span>password,
+</span></span><span style="display:flex;"><span>            UserAttributes<span style="color:#f92672">=</span>[
+</span></span><span style="display:flex;"><span>                {<span style="color:#e6db74">&#39;Name&#39;</span>: <span style="color:#e6db74">&#39;email&#39;</span>, <span style="color:#e6db74">&#39;Value&#39;</span>: email},
+</span></span><span style="display:flex;"><span>                {<span style="color:#e6db74">&#39;Name&#39;</span>: <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;Value&#39;</span>: name}
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        user_id <span style="color:#f92672">=</span> cognito_response[<span style="color:#e6db74">&#39;UserSub&#39;</span>]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Auto-confirm user for development</span>
+</span></span><span style="display:flex;"><span>        cognito_client<span style="color:#f92672">.</span>admin_confirm_sign_up(
+</span></span><span style="display:flex;"><span>            UserPoolId<span style="color:#f92672">=</span>USER_POOL_ID,
+</span></span><span style="display:flex;"><span>            Username<span style="color:#f92672">=</span>email
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Store user in DynamoDB</span>
+</span></span><span style="display:flex;"><span>        table <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(USERS_TABLE)
+</span></span><span style="display:flex;"><span>        timestamp <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>utcnow()<span style="color:#f92672">.</span>isoformat() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;Z&#39;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        table<span style="color:#f92672">.</span>put_item(
+</span></span><span style="display:flex;"><span>            Item<span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;userId&#39;</span>: user_id,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;email&#39;</span>: email,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;name&#39;</span>: name,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;role&#39;</span>: role,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;department&#39;</span>: department,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;employeeId&#39;</span>: employee_id,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;isActive&#39;</span>: <span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;createdAt&#39;</span>: timestamp,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;updatedAt&#39;</span>: timestamp
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">201</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;headers&#39;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;Content-Type&#39;</span>: <span style="color:#e6db74">&#39;application/json&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span>: <span style="color:#e6db74">&#39;*&#39;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps({
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;message&#39;</span>: <span style="color:#e6db74">&#39;User registered successfully&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;userId&#39;</span>: user_id
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> ClientError <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        error_code <span style="color:#f92672">=</span> e<span style="color:#f92672">.</span>response[<span style="color:#e6db74">&#39;Error&#39;</span>][<span style="color:#e6db74">&#39;Code&#39;</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> error_code <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;UsernameExistsException&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">409</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;headers&#39;</span>: {<span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span>: <span style="color:#e6db74">&#39;*&#39;</span>},
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps({<span style="color:#e6db74">&#39;error&#39;</span>: <span style="color:#e6db74">&#39;User already exists&#39;</span>})
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;headers&#39;</span>: {<span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span>: <span style="color:#e6db74">&#39;*&#39;</span>},
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps({<span style="color:#e6db74">&#39;error&#39;</span>: str(e)})
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;headers&#39;</span>: {<span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span>: <span style="color:#e6db74">&#39;*&#39;</span>},
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps({<span style="color:#e6db74">&#39;error&#39;</span>: str(e)})
+</span></span><span style="display:flex;"><span>        }
+</span></span></code></pre></div><p>Deploy the registration handler:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zip -g auth-register-handler.zip auth_register_handler.py
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>aws lambda create-function <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --function-name insighthr-auth-register-handler <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --runtime python3.11 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --role arn:aws:iam::<span style="color:#e6db74">${</span>ACCOUNT_ID<span style="color:#e6db74">}</span>:role/insighthr-lambda-role <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --handler auth_register_handler.lambda_handler <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --zip-file fileb://auth-register-handler.zip <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --timeout <span style="color:#ae81ff">30</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --memory-size <span style="color:#ae81ff">256</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --environment Variables<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        USER_POOL_ID=</span><span style="color:#e6db74">${</span>USER_POOL_ID<span style="color:#e6db74">}</span><span style="color:#e6db74">,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        CLIENT_ID=</span><span style="color:#e6db74">${</span>CLIENT_ID<span style="color:#e6db74">}</span><span style="color:#e6db74">,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        DYNAMODB_USERS_TABLE=insighthr-users-dev
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span></code></pre></div><h3 id="step-5-create-api-gateway-endpoints">Step 5: Create API Gateway Endpoints</h3>
+<h4 id="create-rest-api">Create REST API</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create API</span>
+</span></span><span style="display:flex;"><span>API_ID<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>aws apigateway create-rest-api <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --name <span style="color:#e6db74">&#34;InsightHR API&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --description <span style="color:#e6db74">&#34;InsightHR Backend API&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --query <span style="color:#e6db74">&#39;id&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --output text<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;API ID: </span>$API_ID<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h4 id="create-cognito-authorizer">Create Cognito Authorizer</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create authorizer</span>
+</span></span><span style="display:flex;"><span>AUTHORIZER_ID<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>aws apigateway create-authorizer <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --name insighthr-cognito-authorizer <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --type COGNITO_USER_POOLS <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --provider-arns arn:aws:cognito-idp:ap-southeast-1:<span style="color:#e6db74">${</span>ACCOUNT_ID<span style="color:#e6db74">}</span>:userpool/<span style="color:#e6db74">${</span>USER_POOL_ID<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --identity-source method.request.header.Authorization <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --query <span style="color:#e6db74">&#39;id&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --output text<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Authorizer ID: </span>$AUTHORIZER_ID<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h4 id="create-auth-resource">Create /auth Resource</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Get root resource ID</span>
+</span></span><span style="display:flex;"><span>ROOT_ID<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>aws apigateway get-resources <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --query <span style="color:#e6db74">&#34;items[?path==&#39;/&#39;].id&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --output text <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create /auth resource</span>
+</span></span><span style="display:flex;"><span>AUTH_ID<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>aws apigateway create-resource <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --parent-id $ROOT_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --path-part auth <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --query <span style="color:#e6db74">&#39;id&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --output text <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create /auth/login resource</span>
+</span></span><span style="display:flex;"><span>LOGIN_ID<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>aws apigateway create-resource <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --parent-id $AUTH_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --path-part login <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --query <span style="color:#e6db74">&#39;id&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --output text <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create POST method for /auth/login</span>
+</span></span><span style="display:flex;"><span>aws apigateway put-method <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --resource-id $LOGIN_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --http-method POST <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --authorization-type NONE <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Integrate with Lambda</span>
+</span></span><span style="display:flex;"><span>aws apigateway put-integration <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --resource-id $LOGIN_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --http-method POST <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --type AWS_PROXY <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --integration-http-method POST <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --uri arn:aws:apigateway:ap-southeast-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-1:<span style="color:#e6db74">${</span>ACCOUNT_ID<span style="color:#e6db74">}</span>:function:insighthr-auth-login-handler/invocations <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Grant API Gateway permission to invoke Lambda</span>
+</span></span><span style="display:flex;"><span>aws lambda add-permission <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --function-name insighthr-auth-login-handler <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --statement-id apigateway-invoke <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --action lambda:InvokeFunction <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --principal apigateway.amazonaws.com <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --source-arn <span style="color:#e6db74">&#34;arn:aws:execute-api:ap-southeast-1:</span><span style="color:#e6db74">${</span>ACCOUNT_ID<span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">${</span>API_ID<span style="color:#e6db74">}</span><span style="color:#e6db74">/*/*&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span></code></pre></div><h3 id="step-6-enable-cors">Step 6: Enable CORS</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Enable CORS for /auth/login</span>
+</span></span><span style="display:flex;"><span>aws apigateway put-method <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --resource-id $LOGIN_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --http-method OPTIONS <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --authorization-type NONE <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>aws apigateway put-integration <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --resource-id $LOGIN_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --http-method OPTIONS <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --type MOCK <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --request-templates <span style="color:#e6db74">&#39;{&#34;application/json&#34;: &#34;{\&#34;statusCode\&#34;: 200}&#34;}&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>aws apigateway put-method-response <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --resource-id $LOGIN_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --http-method OPTIONS <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --status-code <span style="color:#ae81ff">200</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --response-parameters <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;method.response.header.Access-Control-Allow-Headers&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;method.response.header.Access-Control-Allow-Methods&#34;: true,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;method.response.header.Access-Control-Allow-Origin&#34;: true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>aws apigateway put-integration-response <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --resource-id $LOGIN_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --http-method OPTIONS <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --status-code <span style="color:#ae81ff">200</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --response-parameters <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;method.response.header.Access-Control-Allow-Headers&#34;: &#34;&#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token&#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;method.response.header.Access-Control-Allow-Methods&#34;: &#34;&#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;POST,OPTIONS&#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;method.response.header.Access-Control-Allow-Origin&#34;: &#34;&#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;*&#39;</span><span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#e6db74">&#39;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span></code></pre></div><h3 id="step-7-deploy-api">Step 7: Deploy API</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create deployment</span>
+</span></span><span style="display:flex;"><span>aws apigateway create-deployment <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --rest-api-id $API_ID <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --stage-name dev <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --description <span style="color:#e6db74">&#34;Initial deployment&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region ap-southeast-1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get API endpoint</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;API Endpoint: https://</span><span style="color:#e6db74">${</span>API_ID<span style="color:#e6db74">}</span><span style="color:#e6db74">.execute-api.ap-southeast-1.amazonaws.com/dev&#34;</span>
+</span></span></code></pre></div><h3 id="step-8-test-authentication">Step 8: Test Authentication</h3>
+<h4 id="test-registration">Test Registration</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    https://<span style="color:#e6db74">${</span>API_ID<span style="color:#e6db74">}</span>.execute-api.ap-southeast-1.amazonaws.com/dev/auth/register <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -d <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;email&#34;: &#34;test@example.com&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;password&#34;: &#34;Test123!&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;name&#34;: &#34;Test User&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;role&#34;: &#34;Employee&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;department&#34;: &#34;DEV&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }&#39;</span>
+</span></span></code></pre></div><h4 id="test-login">Test Login</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    https://<span style="color:#e6db74">${</span>API_ID<span style="color:#e6db74">}</span>.execute-api.ap-southeast-1.amazonaws.com/dev/auth/login <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -d <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;email&#34;: &#34;test@example.com&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;password&#34;: &#34;Test123!&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }&#39;</span>
+</span></span></code></pre></div><h3 id="authentication-flow-summary">Authentication Flow Summary</h3>
+<pre tabindex="0"><code>1. User submits credentials → Frontend
+2. Frontend calls /auth/login → API Gateway
+3. API Gateway routes to Lambda → auth-login-handler
+4. Lambda authenticates with Cognito → Cognito User Pool
+5. Cognito returns JWT tokens → Lambda
+6. Lambda retrieves user data → DynamoDB
+7. Lambda returns tokens + user data → Frontend
+8. Frontend stores tokens → localStorage
+9. Subsequent requests include JWT → Authorization header
+</code></pre><h3 id="security-best-practices">Security Best Practices</h3>
+<p>✅ <strong>Password Policy</strong>: Strong password requirements
+✅ <strong>JWT Tokens</strong>: Short-lived access tokens
+✅ <strong>Refresh Tokens</strong>: Long-lived for token renewal
+✅ <strong>HTTPS Only</strong>: All communication encrypted
+✅ <strong>CORS</strong>: Properly configured for frontend domain
+✅ <strong>No Secrets</strong>: Client doesn&rsquo;t use client secret</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p><strong>Cognito Authentication Fails</strong>:</p>
+<ul>
+<li>Verify user pool ID and client ID</li>
+<li>Check password meets requirements</li>
+<li>Ensure user is confirmed</li>
+</ul>
+<p><strong>Lambda Permission Denied</strong>:</p>
+<ul>
+<li>Check IAM role has Cognito permissions</li>
+<li>Verify Lambda execution role attached</li>
+</ul>
+<p><strong>CORS Errors</strong>:</p>
+<ul>
+<li>Enable CORS on API Gateway</li>
+<li>Check Access-Control-Allow-Origin header</li>
+<li>Verify OPTIONS method configured</li>
+</ul>
+<h3 id="next-steps">Next Steps</h3>
+<p>With authentication configured, proceed to <a href="../../5-workshop/5.7-backend-services/">Backend Services</a> to implement employee, performance, and chatbot APIs.</p>
+
 
 
 
@@ -1520,6 +2127,26 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1552,6 +2179,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1571,9 +2213,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1611,10 +2250,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../5-workshop/5.11-cleanup/" title="Cleanup"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../5-workshop/5.5-database-setup/" title="Database Setup (DynamoDB)"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../6-self-evaluation/" title="Self-Assessment" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../5-workshop/5.7-backend-services/" title="Backend Services" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1624,19 +2263,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1765296853"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1765296853"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1765296853"></script>
-    <script src="../../js/jquery.sticky.js?1765296853"></script>
-    <script src="../../js/featherlight.min.js?1765296853"></script>
-    <script src="../../js/highlight.pack.js?1765296853"></script>
+    <script src="../../js/clipboard.min.js?1765297079"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1765297079"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1765297079"></script>
+    <script src="../../js/jquery.sticky.js?1765297079"></script>
+    <script src="../../js/featherlight.min.js?1765297079"></script>
+    <script src="../../js/highlight.pack.js?1765297079"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1765296853"></script>
-    <script src="../../js/learn.js?1765296853"></script>
-    <script src="../../js/hugo-learn.js?1765296853"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1765297079"></script>
+    <script src="../../js/learn.js?1765297079"></script>
+    <script src="../../js/hugo-learn.js?1765297079"></script>
 
-    <link href="../../mermaid/mermaid.css?1765296853" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1765296853"></script>
+    <link href="../../mermaid/mermaid.css?1765297079" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1765297079"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
