@@ -1,6 +1,6 @@
 baseURL = "/"
 relativeURLs = true
-canonifyURLs = false
+canonifyURLs = true
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
@@ -9,15 +9,12 @@ theme = "hugo-theme-learn"
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
-
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "workshop"
   # Git hub repo link
   editURL = ""
-  description = "AWS First Cloud Journey Internship Report"
+  description = ""
   author = "khoado7577@gmail.com"
   showVisitedLinks = true
   disableBreadcrumb = false
@@ -28,7 +25,6 @@ defaultContentLanguageInSubdir = false
 title = "Internship Report"
 weight = 1
 languageName = "English"
-contentDir = "content"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group"
@@ -40,7 +36,6 @@ weight = 20
 title = "Báo cáo thực tập"
 weight = 2
 languageName = "Tiếng Việt"
-contentDir = "content"
 
 [[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group"
