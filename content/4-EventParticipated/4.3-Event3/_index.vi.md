@@ -86,6 +86,7 @@ Workshop **“Data Science on AWS”** đóng vai trò là cầu nối quan tr�
 
 #### Một số hình ảnh khi tham gia sự kiện
 
-- Thêm các hình ảnh của các bạn tại đây
+![Data Science on AWS Workshop](/images/data-science-on-aws.jpg)
+*Buổi workshop tại FPT University - Data Science on AWS cùng AWS Community Builders*
 
 > Tổng thể, workshop đã cung cấp một khuôn khổ Data Science toàn diện, nhấn mạnh tầm quan trọng của các công cụ AWS được quản lý để đạt được tính linh hoạt, khả năng mở rộng và tối ưu hóa chi phí.

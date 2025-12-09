@@ -86,6 +86,7 @@ The workshop **"Data Science on AWS"** served as an important bridge between aca
 
 #### Some photos from the event
 
-- Add your event photos here
+![Data Science on AWS Workshop](/images/data-science-on-aws.jpg)
+*Workshop session at FPT University - Data Science on AWS with AWS Community Builders*
 
 > Overall, the workshop provided a comprehensive Data Science framework, emphasizing the importance of AWS managed tools for achieving flexibility, scalability, and cost optimization.

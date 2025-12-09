@@ -410,6 +410,19 @@
                 href="https://ruskicoder.github.io/fcj-worklog/vi/4-eventparticipated/4.7-event7/"
                 />
   </url><url>
+    <loc>https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.8-frontend/</loc>
+    <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ruskicoder.github.io/fcj-worklog/5-workshop/5.8-frontend/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.8-frontend/"
+                />
+  </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/vi/1-worklog/1.8-week8/</loc>
     <lastmod>2025-10-27T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -421,6 +434,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://ruskicoder.github.io/fcj-worklog/vi/1-worklog/1.8-week8/"
+                />
+  </url><url>
+    <loc>https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.9-deployment/</loc>
+    <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ruskicoder.github.io/fcj-worklog/5-workshop/5.9-deployment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.9-deployment/"
                 />
   </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/vi/1-worklog/1.9-week9/</loc>
@@ -436,6 +462,19 @@
                 href="https://ruskicoder.github.io/fcj-worklog/vi/1-worklog/1.9-week9/"
                 />
   </url><url>
+    <loc>https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.10-testing/</loc>
+    <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ruskicoder.github.io/fcj-worklog/5-workshop/5.10-testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.10-testing/"
+                />
+  </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/vi/1-worklog/1.10-week10/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -447,6 +486,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://ruskicoder.github.io/fcj-worklog/vi/1-worklog/1.10-week10/"
+                />
+  </url><url>
+    <loc>https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.11-cleanup/</loc>
+    <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ruskicoder.github.io/fcj-worklog/5-workshop/5.11-cleanup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.11-cleanup/"
                 />
   </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/vi/1-worklog/1.11-week11/</loc>
@@ -473,18 +525,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://ruskicoder.github.io/fcj-worklog/vi/1-worklog/1.12-week12/"
-                />
-  </url><url>
-    <loc>https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.8-frontend/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ruskicoder.github.io/fcj-worklog/5-workshop/5.8-frontend/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.8-frontend/"
                 />
   </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/vi/categories/</loc>

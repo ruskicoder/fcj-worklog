@@ -438,6 +438,16 @@
   </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/5-workshop/5.9-deployment/</loc>
     <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.9-deployment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ruskicoder.github.io/fcj-worklog/5-workshop/5.9-deployment/"
+                />
   </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/1-worklog/1.9-week9/</loc>
     <lastmod>2025-11-03T00:00:00+00:00</lastmod>
@@ -454,6 +464,16 @@
   </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/5-workshop/5.10-testing/</loc>
     <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.10-testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ruskicoder.github.io/fcj-worklog/5-workshop/5.10-testing/"
+                />
   </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/1-worklog/1.10-week10/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
@@ -470,6 +490,16 @@
   </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/5-workshop/5.11-cleanup/</loc>
     <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://ruskicoder.github.io/fcj-worklog/vi/5-workshop/5.11-cleanup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ruskicoder.github.io/fcj-worklog/5-workshop/5.11-cleanup/"
+                />
   </url><url>
     <loc>https://ruskicoder.github.io/fcj-worklog/1-worklog/1.11-week11/</loc>
     <lastmod>2025-11-17T00:00:00+00:00</lastmod>
