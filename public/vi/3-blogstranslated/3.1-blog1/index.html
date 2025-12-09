@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta
+  name="description"
+  content="AWS First Cloud Journey Internship Report"
+/>
+<meta name="author" content="khoado7577@gmail.com" />
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>Blog 1 :: Báo cáo thực tập</title>
+
+    
+    <link href="../../../css/nucleus.css?1765294004" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1765294004" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1765294004" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1765294004" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1765294004" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1765294004" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1765294004" rel="stylesheet">
+    <link href="../../../css/theme.css?1765294004" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1765294004" rel="stylesheet">
+    
+    <link href="../../../css/theme-workshop.css?1765294004" rel="stylesheet">
+    
+    
+
+    <script src="../../../js/jquery-3.3.1.min.js?1765294004"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="../../../vi/3-blogstranslated/3.1-blog1/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="../../../">
+  <svg
+    id="Layer_1"
+    data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 60 30"
+    width="30%"
+  >
+    <defs>
+      <style>
+        .cls-1 {
+          fill: #fff;
+        }
+        .cls-2 {
+          fill: #f90;
+          fill-rule: evenodd;
+        }
+      </style>
+    </defs>
+    <title>AWS-Logo_White-Color</title>
+    <path
+      class="cls-1"
+      d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"
+    ></path>
+  </svg>
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1765294004"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1765294004"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/vi";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1765294004"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/vi/1-worklog/"
+  title="Nhật ký công việc"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/">
+     <b> 1. </b> Nhật ký công việc 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/1-worklog/1.1-week1/"
+  title="Worklog Tuần 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Worklog Tuần 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.2-week2/"
+  title="Worklog Tuần 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Worklog Tuần 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.3-week3/"
+  title="Worklog Tuần 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Worklog Tuần 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.4-week4/"
+  title="Worklog Tuần 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Worklog Tuần 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.5-week5/"
+  title="Worklog Tuần 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Worklog Tuần 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.6-week6/"
+  title="Worklog Tuần 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Worklog Tuần 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.7-week7/"
+  title="Worklog Tuần 7"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Worklog Tuần 7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.8-week8/"
+  title="Worklog Tuần 8"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Worklog Tuần 8 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.9-week9/"
+  title="Worklog Tuần 9"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Worklog Tuần 9 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.10-week10/"
+  title="Worklog Tuần 10"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Worklog Tuần 10 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.11-week11/"
+  title="Worklog Tuần 11"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.11-week11/">
+     <b> 1.11. </b> Worklog Tuần 11 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.12-week12/"
+  title="Worklog Tuần 12"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.12-week12/">
+     <b> 1.12. </b> Worklog Tuần 12 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/2-proposal/"
+  title="Đề Xuất"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/2-proposal/">
+     <b> 2. </b> Đề Xuất 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/3-blogstranslated/"
+  title="Các bài blogs đã dịch"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/">
+     <b> 3. </b> Các bài blogs đã dịch 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.1-blog1/"
+  title="Blog 1"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.1-blog1/">
+     <b> 3.1. </b> Blog 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.2-blog2/"
+  title="Blog 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.2-blog2/">
+     <b> 3.2. </b> Blog 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.3-blog3/"
+  title="Blog 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.3-blog3/">
+     <b> 3.3. </b> Blog 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/4-eventparticipated/"
+  title="Các events đã tham gia"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/">
+     <b> 4. </b> Các events đã tham gia 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.1-event1/"
+  title="Event 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.1-event1/">
+     <b> 4.1. </b> Event 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.2-event2/"
+  title="Event 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.2-event2/">
+     <b> 4.2. </b> Event 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.3-event3/"
+  title="Event 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.3-event3/">
+     <b> 4.3. </b> Event 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.4-event4/"
+  title="Event 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.4-event4/">
+     <b> 4.4. </b> Event 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.5-event5/"
+  title="Event 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.5-event5/">
+     <b> 4.5. </b> Event 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.6-event6/"
+  title="Event 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.6-event6/">
+     <b> 4.6. </b> Event 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.7-event7/"
+  title="Event7"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.7-event7/">
+     <b> 4.7. </b> Event7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/">
+     <b> 5. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.1-workshop-overview/"
+  title="Giới thiệu"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.1-workshop-overview/">
+     <b> 5.1. </b> Giới thiệu 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.2-prerequiste/"
+  title="Các bước chuẩn bị"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.2-prerequiste/">
+     <b> 5.2. </b> Các bước chuẩn bị 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-s3-vpc/"
+  title="Truy cập S3 từ VPC"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.3-s3-vpc/">
+     <b> 5.3. </b> Truy cập S3 từ VPC 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/"
+  title="Tạo một Gateway Endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/">
+     <b> 5.3.1 </b> Tạo một Gateway Endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/"
+  title="Kiểm tra Gateway Endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/">
+     <b> 5.3.2 </b> Kiểm tra Gateway Endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/"
+  title="Truy cập S3 từ môi trường truyền thống"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/">
+     <b> 5.4. </b> Truy cập S3 từ môi trường truyền thống 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/"
+  title="Chuẩn bị tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/">
+     <b> 5.4.1 </b> Chuẩn bị tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/"
+  title="Tạo một S3 Interface endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/">
+     <b> 5.4.2 </b> Tạo một S3 Interface endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/"
+  title="Kiểm tra Interface Endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/">
+     <b> 5.4.3 </b> Kiểm tra Interface Endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/"
+  title="Mô phỏng On-premises DNS "
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/">
+     <b> 5.4.4 </b> Mô phỏng On-premises DNS  
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.5-policy/"
+  title="VPC Endpoint Policies"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.5-policy/">
+     <b> 5.5 </b> VPC Endpoint Policies 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.6-cleanup/"
+  title="Dọn dẹp tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5.6-cleanup/">
+     <b> 5.6. </b> Dọn dẹp tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/6-self-evaluation/"
+  title="Tự đánh giá"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/6-self-evaluation/">
+     <b> 6. </b> Tự đánh giá 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/7-feedback/"
+  title="Chia sẻ, đóng góp ý kiến"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/7-feedback/">
+     <b> 7. </b> Chia sẻ, đóng góp ý kiến 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"
+            ><i class='fab fa-facebook'></i> AWS Study Group</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="/3-blogstranslated/3.1-blog1/"
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="/vi/3-blogstranslated/3.1-blog1/"
+                  selected
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    
+    <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Migrate" Alt="web counter" border="0" /></a> <br>
+    <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Total CLoud Journey" Alt="web counter" border="0" />
+
+</left>
+<left>
+    <br>
+    <br>
+    <b>Last Updated</b><br>
+    <i>
+        <span id="lastUpdated" style="color:orange;"></span>
+    </i>
+
+    <script>
+        
+        const today = new Date();
+        
+        const formattedDate = today.toLocaleDateString('en-GB');
+        
+        document.getElementById('lastUpdated').textContent = formattedDate;
+    </script>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud Journey </a> <br>
+
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../../vi/'>Báo cáo thực tập</a> > <a href='../../../vi/3-blogstranslated/'>Các bài blogs đã dịch</a> > Blog 1
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#xây-dựng-các-ứng-dụng-rag-hiệu-quả-về-chi-phí-với-knowledge-bases-của-amazon-bedrock-và-amazon-s3-vectors">Xây dựng các ứng dụng RAG hiệu quả về chi phí với Knowledge Bases của Amazon Bedrock và Amazon S3 Vectors</a></li>
+    <li><a href="#tổng-quan-về-tích-hợp-amazon-bedrock-knowledge-bases-và-amazon-s3-vectors"><strong>Tổng quan về tích hợp Amazon Bedrock Knowledge Bases và Amazon S3 Vectors</strong></a></li>
+    <li><a href="#điều-kiện-tiên-quyết"><strong>Điều kiện tiên quyết</strong></a></li>
+    <li><a href="#hướng-dẫn-tích-hợp-amazon-bedrock-knowledge-bases-và-amazon-s3-vectors"><strong>Hướng dẫn tích hợp Amazon Bedrock Knowledge Bases và Amazon S3 Vectors</strong></a>
+      <ul>
+        <li><a href="#tạo-một-knowledge-base-mới"><strong>Tạo một knowledge base mới</strong></a></li>
+        <li><a href="#cấu-hình-nguồn-dữ-liệu"><strong>Cấu hình nguồn dữ liệu</strong></a></li>
+        <li><a href="#cấu-hình-lưu-trữ-và-xử-lý-dữ-liệu"><strong>Cấu hình lưu trữ và xử lý dữ liệu</strong></a></li>
+        <li><a href="#đồng-bộ-hóa-nguồn-dữ-liệu"><strong>Đồng bộ hóa nguồn dữ liệu</strong></a></li>
+        <li><a href="#kiểm-tra-knowledge-base"><strong>Kiểm tra knowledge base</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#tạo-knowledge-base-amazon-bedrock-của-bạn-theo-chương-trình"><strong>Tạo knowledge base Amazon Bedrock của bạn theo chương trình</strong></a></li>
+    <li><a href="#dọn-dẹp"><strong>Dọn dẹp</strong></a></li>
+    <li><a href="#kết-luận"><strong>Kết luận</strong></a>
+      <ul>
+        <li><a href="#về-các-tác-giả"><strong>Về các tác giả</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Blog 1
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="xây-dựng-các-ứng-dụng-rag-hiệu-quả-về-chi-phí-với-knowledge-bases-của-amazon-bedrock-và-amazon-s3-vectors">Xây dựng các ứng dụng RAG hiệu quả về chi phí với Knowledge Bases của Amazon Bedrock và Amazon S3 Vectors</h2>
+<p>bởi <strong>Vaibhav Sabharwal</strong>, <strong>Ashish Lal</strong>, <strong>Dani Mitchell</strong>, và <strong>Irene Marban</strong><br>
+vào ngày 17 THÁNG 7 NĂM 2025<br>
+trong <a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-machine-learning/amazon-bedrock/"><strong>Amazon Bedrock</strong></a>, <a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-machine-learning/amazon-bedrock/amazon-bedrock-knowledge-bases/"><strong>Amazon Bedrock Knowledge Bases</strong></a>, <a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-machine-learning/"><strong>Amazon Machine Learning</strong></a>, <a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/"><strong>Trí tuệ nhân tạo</strong></a></p>
+<p>Nhúng véc-tơ (vector embeddings) đã trở nên thiết yếu cho các ứng dụng <a href="https://aws.amazon.com/what-is/retrieval-augmented-generation/">Sinh dữ liệu tăng cường truy xuất (RAG)</a> hiện đại, nhưng các tổ chức phải đối mặt với những thách thức đáng kể về chi phí khi mở rộng quy mô. Khi các cơ sở tri thức phát triển và yêu cầu các nhúng chi tiết hơn, nhiều cơ sở dữ liệu véc-tơ dựa trên lưu trữ hiệu suất cao như SSD hoặc giải pháp trong bộ nhớ trở nên đắt đỏ đến mức không thể chi trả. Rào cản chi phí này thường buộc các tổ chức phải giới hạn phạm vi của các ứng dụng RAG của họ hoặc thỏa hiệp về mức độ chi tiết của các biểu diễn véc-tơ, có khả năng ảnh hưởng đến chất lượng kết quả. Ngoài ra, đối với các trường hợp sử dụng liên quan đến dữ liệu lịch sử hoặc lưu trữ vẫn cần có thể tìm kiếm được, việc lưu trữ véc-tơ trong các cơ sở dữ liệu véc-tơ chuyên dụng được tối ưu hóa cho khối lượng công việc thông lượng cao là một khoản chi phí liên tục không cần thiết.</p>
+<p>Bắt đầu từ ngày 15 tháng 7, khách hàng của <a href="https://aws.amazon.com/bedrock/knowledge-bases/">Amazon Bedrock Knowledge Bases</a> có thể chọn <a href="https://aws.amazon.com/s3/features/vectors/">Amazon S3 Vectors</a> (bản xem trước), dịch vụ lưu trữ đối tượng đám mây đầu tiên có hỗ trợ tích hợp để lưu trữ và truy vấn véc-tơ với chi phí thấp, làm kho lưu trữ véc-tơ. Người dùng Amazon Bedrock Knowledge Bases giờ đây có thể giảm chi phí tải lên, lưu trữ và truy vấn véc-tơ lên đến 90%. Được thiết kế để lưu trữ bền vững và tối ưu hóa chi phí cho các bộ dữ liệu véc-tơ lớn với hiệu suất truy vấn dưới một giây, S3 Vectors là lựa chọn lý tưởng cho các ứng dụng RAG yêu cầu lưu trữ dài hạn khối lượng véc-tơ khổng lồ và có thể chấp nhận sự đánh đổi về hiệu suất so với các cơ sở dữ liệu véc-tơ có số truy vấn mỗi giây (QPS) cao và độ trễ mili giây. Việc tích hợp với <a href="https://aws.amazon.com/bedrock/">Amazon Bedrock</a> có nghĩa là bạn có thể xây dựng các ứng dụng RAG tiết kiệm hơn trong khi vẫn duy trì hiệu suất tìm kiếm ngữ nghĩa cần thiết cho kết quả chất lượng.</p>
+<p>Trong bài đăng này, chúng tôi trình bày cách tích hợp Amazon S3 Vectors với Amazon Bedrock Knowledge Bases cho các ứng dụng RAG. Bạn sẽ học được một phương pháp thực tế để mở rộng quy mô cơ sở tri thức của mình để xử lý hàng triệu tài liệu trong khi vẫn duy trì chất lượng truy xuất và sử dụng bộ lưu trữ hiệu quả về chi phí của S3 Vectors.</p>
+<h2 id="tổng-quan-về-tích-hợp-amazon-bedrock-knowledge-bases-và-amazon-s3-vectors"><strong>Tổng quan về tích hợp Amazon Bedrock Knowledge Bases và Amazon S3 Vectors</strong></h2>
+<p>Khi tạo một knowledge base trong Amazon Bedrock, bạn có thể chọn S3 Vectors làm tùy chọn lưu trữ véc-tơ của mình. Sử dụng phương pháp này, bạn có thể xây dựng các ứng dụng RAG có thể mở rộng, hiệu quả về chi phí mà không cần cấp phép hoặc quản lý cơ sở hạ tầng phức tạp. Việc tích hợp mang lại sự tiết kiệm chi phí đáng kể trong khi vẫn duy trì hiệu suất truy vấn dưới một giây, làm cho nó trở nên lý tưởng để làm việc với các bộ dữ liệu véc-tơ lớn hơn được tạo ra từ khối lượng lớn dữ liệu phi cấu trúc bao gồm văn bản, hình ảnh, âm thanh và video. Sử dụng mô hình định giá trả theo mức sử dụng với các mức giá thấp, S3 Vectors cung cấp khả năng tối ưu hóa chi phí hàng đầu trong ngành, giúp giảm chi phí tải lên, lưu trữ và truy vấn véc-tơ lên đến 90% so với các giải pháp thay thế. Các khả năng tìm kiếm nâng cao bao gồm lọc siêu dữ liệu phong phú, vì vậy bạn có thể tinh chỉnh các truy vấn theo thuộc tính tài liệu như ngày tháng, danh mục và nguồn. Sự kết hợp giữa S3 Vectors và Amazon Bedrock là lý tưởng cho các tổ chức xây dựng các cơ sở tri thức quy mô lớn đòi hỏi cả hiệu quả chi phí và khả năng truy xuất hiệu quả—từ việc quản lý các kho tài liệu mở rộng đến các kho lưu trữ lịch sử và các ứng dụng yêu cầu biểu diễn véc-tơ chi tiết. Hướng dẫn này bao gồm các bước cấp cao sau:</p>
+<ol>
+<li>Tạo một knowledge base mới</li>
+<li>Cấu hình nguồn dữ liệu</li>
+<li>Cấu hình nguồn dữ liệu và xử lý</li>
+<li>Đồng bộ hóa nguồn dữ liệu</li>
+<li>Kiểm tra knowledge base</li>
+</ol>
+<h2 id="điều-kiện-tiên-quyết"><strong>Điều kiện tiên quyết</strong></h2>
+<p>Trước khi bắt đầu, hãy đảm bảo rằng bạn có các điều kiện tiên quyết sau:</p>
+<ul>
+<li>Một tài khoản AWS có quyền truy cập dịch vụ phù hợp.</li>
+<li>Một vai trò <a href="https://aws.amazon.com/iam/">AWS Identity and Access Management</a> (IAM) với các quyền phù hợp để truy cập Amazon Bedrock và <a href="https://aws.amazon.com/s3/">Amazon Simple Storage Service</a> (Amazon S3).</li>
+<li>Bật <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html">quyền truy cập mô hình</a> cho các mô hình nhúng và suy luận như <a href="https://aws.amazon.com/bedrock/amazon-models/titan/">Amazon Titan Text Embeddings V2</a> và <a href="https://aws.amazon.com/ai/generative-ai/nova/">Amazon Nova Pro</a>.</li>
+</ul>
+<h2 id="hướng-dẫn-tích-hợp-amazon-bedrock-knowledge-bases-và-amazon-s3-vectors"><strong>Hướng dẫn tích hợp Amazon Bedrock Knowledge Bases và Amazon S3 Vectors</strong></h2>
+<p>Trong phần này, chúng tôi sẽ hướng dẫn quy trình từng bước để tạo một knowledge base với Amazon S3 Vectors bằng cách sử dụng <a href="https://aws.amazon.com/console/">Bảng điều khiển quản lý AWS</a>. Chúng tôi sẽ bao quát toàn bộ quy trình từ việc cấu hình kho lưu trữ véc-tơ đến việc nhập tài liệu và kiểm tra khả năng truy xuất của bạn.</p>
+<p>Đối với những người thích cấu hình knowledge base của họ theo chương trình thay vì sử dụng bảng điều khiển, kho lưu trữ <a href="https://github.com/aws-samples/amazon-bedrock-samples/blob/main/rag/knowledge-bases/features-examples/10-s3-vectors/knowledge-base-s3-vector.ipynb">Amazon Bedrock Knowledge Bases with S3 Vectors</a> trên GitHub cung cấp một sổ tay hướng dẫn mà bạn có thể làm theo để triển khai thiết lập trong tài khoản của riêng mình.</p>
+<h3 id="tạo-một-knowledge-base-mới"><strong>Tạo một knowledge base mới</strong></h3>
+<p>Để tạo một knowledge base mới, hãy làm theo các bước sau:</p>
+<ol>
+<li>Trên bảng điều khiển Amazon Bedrock trong ngăn điều hướng bên trái, chọn <strong>Knowledge Bases</strong>. Để bắt đầu quá trình tạo, trong danh sách thả xuống <strong>Create</strong>, chọn <strong>Knowledge Base with vector store</strong>.</li>
+<li>Trên trang <strong>Provide Knowledge Base details</strong>, nhập tên mô tả cho knowledge base của bạn và một mô tả tùy chọn để xác định mục đích của nó. Chọn phương pháp cấp quyền IAM của bạn—tạo một vai trò dịch vụ mới hoặc sử dụng một vai trò hiện có—để cấp các quyền cần thiết để truy cập các dịch vụ AWS, như được hiển thị trong ảnh chụp màn hình sau.</li>
+</ol>
+<p>![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-1.jpeg">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-1.jpeg</a>)</p>
+<ol>
+<li>Chọn <strong>Amazon S3</strong>. Tùy chọn, thêm các thẻ để giúp tổ chức và phân loại tài nguyên của bạn và cấu hình các đích đến để gửi nhật ký như một bucket S3 hoặc <a href="https://aws.amazon.com/cloudwatch/">Amazon CloudWatch</a> để theo dõi và khắc phục sự cố.</li>
+<li>Chọn <strong>Next</strong> để tiếp tục đến phần cấu hình nguồn dữ liệu.</li>
+</ol>
+<h3 id="cấu-hình-nguồn-dữ-liệu"><strong>Cấu hình nguồn dữ liệu</strong></h3>
+<p>Để cấu hình nguồn dữ liệu, hãy làm theo các bước sau:</p>
+<ol>
+<li>Gán một tên mô tả cho dữ liệu knowledge base của bạn.</li>
+<li>Trong <strong>Data source location</strong>, chọn xem bucket S3 tồn tại trong tài khoản AWS hiện tại của bạn hay một tài khoản khác, sau đó chỉ định vị trí lưu trữ tài liệu của bạn, như được hiển thị trong ảnh chụp màn hình sau.</li>
+</ol>
+<p>![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-2.png">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-2.png</a>)</p>
+<p>Trong bước này, hãy cấu hình chiến lược phân tích cú pháp của bạn để xác định cách Amazon Bedrock xử lý tài liệu của bạn. Chọn <strong>Amazon Bedrock default parser</strong> cho các tài liệu chỉ có văn bản mà không mất thêm chi phí. Chọn <strong>Amazon Bedrock Data Automation as parser or Foundation models as a parser</strong> để xử lý các tài liệu phức tạp có các yếu tố trực quan.</p>
+<p>Cấu hình chiến lược phân đoạn cũng quan trọng không kém vì nó xác định cách nội dung của bạn được phân đoạn thành các đơn vị có ý nghĩa để nhúng véc-tơ, ảnh hưởng trực tiếp đến chất lượng truy xuất và bảo toàn ngữ cảnh. Chúng tôi đã chọn <strong>Fixed-size chunking</strong> cho ví dụ này do kích thước token có thể dự đoán và sự đơn giản của nó. Vì cả quyết định phân tích cú pháp và phân đoạn đều không thể sửa đổi sau khi tạo, hãy chọn các tùy chọn phù hợp nhất với cấu trúc nội dung và nhu cầu truy xuất của bạn. Đối với dữ liệu nhạy cảm, bạn có thể sử dụng cài đặt nâng cao để triển khai mã hóa <a href="https://aws.amazon.com/kms/">AWS Key Management Service</a> (AWS KMS) hoặc áp dụng các hàm chuyển đổi tùy chỉnh để tối ưu hóa tài liệu của bạn trước khi nhập. Theo mặc định, S3 Vectors sẽ sử dụng mã hóa phía máy chủ (SSE-S3).</p>
+<h3 id="cấu-hình-lưu-trữ-và-xử-lý-dữ-liệu"><strong>Cấu hình lưu trữ và xử lý dữ liệu</strong></h3>
+<p>Để cấu hình lưu trữ và xử lý dữ liệu, trước tiên hãy chọn mô hình nhúng, như được hiển thị trong ảnh chụp màn hình sau. Mô hình nhúng sẽ chuyển đổi các đoạn văn bản của bạn thành các biểu diễn véc-tơ số cho khả năng tìm kiếm ngữ nghĩa. Nếu kết nối với một S3 Vector hiện có làm kho lưu trữ véc-tơ, hãy đảm bảo rằng kích thước của mô hình nhúng khớp với kích thước được sử dụng khi tạo kho lưu trữ véc-tơ của bạn vì sự không khớp về kích thước sẽ gây ra lỗi nhập. Amazon Bedrock cung cấp một số mô hình nhúng để lựa chọn, mỗi mô hình có các kích thước véc-tơ và đặc điểm hiệu suất khác nhau được tối ưu hóa cho các trường hợp sử dụng khác nhau. Hãy xem xét cả sự phong phú về ngữ nghĩa của mô hình và các tác động về chi phí của nó khi đưa ra lựa chọn của bạn.</p>
+<p>![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-3.jpeg">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-3.jpeg</a>)</p>
+<p>Tiếp theo, cấu hình kho lưu trữ véc-tơ. Đối với việc lựa chọn lưu trữ véc-tơ, hãy chọn cách Amazon Bedrock Knowledge Bases sẽ lưu trữ và quản lý các nhúng véc-tơ được tạo từ tài liệu của bạn trong Amazon S3 Vectors, bằng một trong hai tùy chọn sau:</p>
+<h4 id="tùy-chọn-1-nhanh-chóng-tạo-một-kho-lưu-trữ-véc-tơ-mới"><em><strong>Tùy chọn 1. Nhanh chóng tạo một kho lưu trữ véc-tơ mới</strong></em></h4>
+<p>Tùy chọn được khuyến nghị này, được hiển thị trong ảnh chụp màn hình sau, tự động tạo một bucket S3 vector trong tài khoản của bạn trong quá trình tạo knowledge base. Hệ thống sẽ tối ưu hóa việc lưu trữ véc-tơ của bạn để lưu trữ các bộ dữ liệu véc-tơ quy mô lớn một cách bền vững và hiệu quả về chi phí, tạo ra một bucket S3 vector và một chỉ mục véc-tơ cho bạn.</p>
+<p>![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-4.png">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-4.png</a>)</p>
+<h4 id="tùy-chọn-2-sử-dụng-một-kho-lưu-trữ-véc-tơ-hiện-có"><em><strong>Tùy chọn 2. Sử dụng một kho lưu trữ véc-tơ hiện có</strong></em></h4>
+<p>Khi tạo chỉ mục Amazon S3 Vector làm kho lưu trữ véc-tơ để sử dụng với Amazon Bedrock Knowledge Bases, bạn có thể đính kèm siêu dữ liệu (chẳng hạn như năm, tác giả, thể loại và vị trí) dưới dạng các cặp khóa-giá trị cho mỗi véc-tơ. Theo mặc định, các trường siêu dữ liệu có thể được sử dụng làm bộ lọc trong các truy vấn tương tự trừ khi được chỉ định là siêu dữ liệu không thể lọc tại thời điểm tạo chỉ mục véc-tơ. Các chỉ mục S3 Vector hỗ trợ các loại chuỗi, số và Boolean lên đến 40 KB mỗi véc-tơ, với siêu dữ liệu có thể lọc được giới hạn ở mức 2 KB mỗi véc-tơ.</p>
+<p>Để chứa các đoạn văn bản lớn hơn và siêu dữ liệu phong phú hơn trong khi vẫn cho phép lọc trên các thuộc tính quan trọng khác, hãy thêm &ldquo;AMAZON_BEDROCK_TEXT&rdquo; vào danh sách nonFilterableMetadataKeys trong cấu hình chỉ mục của bạn. Phương pháp này tối ưu hóa việc phân bổ bộ nhớ của bạn cho nội dung tài liệu trong khi vẫn duy trì khả năng lọc cho các thuộc tính có ý nghĩa như danh mục hoặc ngày tháng. Hãy nhớ rằng các trường được thêm vào mảng nonFilterableMetadataKeys không thể được sử dụng với tính năng lọc siêu dữ liệu trong các truy vấn và không thể sửa đổi sau khi chỉ mục được tạo.</p>
+<p>Đây là một ví dụ về việc tạo một chỉ mục Amazon S3 Vector với cấu hình siêu dữ liệu phù hợp:</p>
+<p>code CSS<br>
+downloadcontent_copy<br>
+expand_less<br>
+s3vectors.create_index(<br>
+vectorBucketName=&ldquo;my-first-vector-bucket&rdquo;,<br>
+indexName=&ldquo;my-first-vector-index&rdquo;,<br>
+dimension=1024,<br>
+distanceMetric=&ldquo;cosine&rdquo;,<br>
+dataType=&ldquo;float32&rdquo;, <br>
+metadataConfiguration={&ldquo;nonFilterableMetadataKeys&rdquo;: [&ldquo;AMAZON_BEDROCK_TEXT&rdquo;]}<br>
+)</p>
+<p>Để biết chi tiết về cách tạo kho lưu trữ véc-tơ, hãy tham khảo <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-s3-vectors-first-cloud-storage-with-native-vector-support-at-scale/">Giới thiệu Amazon S3 Vectors</a> trong Blog Tin tức của AWS.</p>
+<p>Sau khi bạn có một bucket và chỉ mục S3 Vector, bạn có thể kết nối nó với knowledge base của mình. Bạn sẽ cần cung cấp cả <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html">Tên tài nguyên Amazon</a> (ARN) của bucket S3 Vector và ARN của chỉ mục véc-tơ, như được hiển thị trong ảnh chụp màn hình sau, để liên kết chính xác knowledge base của bạn với chỉ mục S3 Vector hiện có.</p>
+<p>![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-5.jpeg">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-5.jpeg</a>)</p>
+<h3 id="đồng-bộ-hóa-nguồn-dữ-liệu"><strong>Đồng bộ hóa nguồn dữ liệu</strong></h3>
+<p>Sau khi bạn đã cấu hình knowledge base của mình với S3 Vectors, bạn cần đồng bộ hóa nguồn dữ liệu của mình để tạo và lưu trữ các nhúng véc-tơ. Từ bảng điều khiển Amazon Bedrock Knowledge Bases, hãy mở knowledge base đã tạo của bạn và tìm nguồn dữ liệu đã cấu hình của bạn và chọn <strong>Sync</strong> để bắt đầu quá trình, như được hiển thị trong ảnh chụp màn hình sau. Trong quá trình đồng bộ hóa, hệ thống sẽ xử lý tài liệu của bạn theo cấu hình phân tích cú pháp và phân đoạn của bạn, tạo các nhúng bằng mô hình bạn đã chọn và lưu trữ chúng trong chỉ mục S3 vector của bạn. Bạn có thể theo dõi tiến trình đồng bộ hóa trong thời gian thực nếu bạn đã cấu hình <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html">Nhật ký Amazon CloudWatch</a> và xác minh trạng thái hoàn thành trước khi kiểm tra khả năng truy xuất của knowledge base.</p>
+<p>![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-6.jpeg">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-6.jpeg</a>)</p>
+<h3 id="kiểm-tra-knowledge-base"><strong>Kiểm tra knowledge base</strong></h3>
+<p>Sau khi cấu hình thành công knowledge base của bạn với S3 Vectors, bạn có thể xác thực chức năng của nó bằng giao diện kiểm tra tích hợp. Bạn có thể sử dụng bảng điều khiển tương tác này để thử nghiệm với các loại truy vấn khác nhau và xem cả kết quả truy xuất và các phản hồi được tạo ra. Chọn giữa chế độ <strong>Chỉ truy xuất</strong> (API Retrieve) để kiểm tra các đoạn nguồn thô hoặc <strong>Truy xuất và tạo phản hồi</strong> (API RetrieveandGenerate) để tìm hiểu cách các <a href="https://aws.amazon.com/what-is/foundation-models/">mô hình nền tảng</a> (FM) như Amazon Nova sử dụng nội dung được truy xuất của bạn. Giao diện kiểm tra cung cấp những hiểu biết có giá trị về cách knowledge base của bạn xử lý các truy vấn, hiển thị các đoạn nguồn, điểm liên quan của chúng và siêu dữ liệu liên quan.</p>
+<p>Bạn cũng có thể cấu hình cài đặt truy vấn cho knowledge base của mình giống như với các tùy chọn lưu trữ véc-tơ khác, bao gồm các bộ lọc để lựa chọn dựa trên siêu dữ liệu, các rào cản để có phản hồi phù hợp, khả năng xếp hạng lại và các tùy chọn sửa đổi truy vấn. Những công cụ này giúp tối ưu hóa chất lượng truy xuất và đảm bảo thông tin phù hợp nhất được trình bày cho các FM của bạn. S3 Vectors hiện hỗ trợ chức năng tìm kiếm ngữ nghĩa. Sử dụng việc xác thực thực hành này, bạn có thể tinh chỉnh cấu hình của mình trước khi tích hợp knowledge base với các ứng dụng sản xuất.</p>
+<p>![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-7.jpeg">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-7.jpeg</a>)</p>
+<h2 id="tạo-knowledge-base-amazon-bedrock-của-bạn-theo-chương-trình"><strong>Tạo knowledge base Amazon Bedrock của bạn theo chương trình</strong></h2>
+<p>Trong các phần trước, chúng tôi đã hướng dẫn cách tạo một knowledge base với Amazon S3 Vectors bằng Bảng điều khiển quản lý AWS. Đối với những người thích tự động hóa quy trình này hoặc tích hợp nó vào các quy trình làm việc hiện có, bạn cũng có thể tạo knowledge base của mình theo chương trình bằng cách sử dụng <a href="https://aws.amazon.com/developer/tools/">AWS SDK</a>.</p>
+<p>Sau đây là một đoạn mã mẫu cho thấy lệnh gọi API trông như thế nào khi tạo một knowledge base Amazon Bedrock theo chương trình với một chỉ mục Amazon S3 Vector hiện có:</p>
+<p>code CSS<br>
+downloadcontent_copy<br>
+expand_less<br>
+response = bedrock.create_knowledge_base(<br>
+description=&lsquo;Amazon Bedrock Knowledge Base integrated with Amazon S3 Vectors&rsquo;,<br>
+knowledgeBaseConfiguration={<br>
+&rsquo;type&rsquo;: &lsquo;VECTOR&rsquo;,<br>
+&lsquo;vectorKnowledgeBaseConfiguration&rsquo;: {<br>
+&rsquo;embeddingModelArn&rsquo;: f&rsquo;arn:aws:bedrock:{region}::foundation-model/amazon.titan-embed-text-v2:0&rsquo;,<br>
+&rsquo;embeddingModelConfiguration&rsquo;: {<br>
+&lsquo;bedrockEmbeddingModelConfiguration&rsquo;: {<br>
+&lsquo;dimensions&rsquo;: vector_dimension, #Verify this is the same value as S3 vector index configuration<br>
+&rsquo;embeddingDataType&rsquo;: &lsquo;FLOAT32&rsquo;<br>
+}<br>
+},<br>
+},<br>
+},<br>
+name=knowledge_base_name,<br>
+roleArn=roleArn,<br>
+storageConfiguration={<br>
+&lsquo;s3VectorsConfiguration&rsquo;: {<br>
+&lsquo;indexArn&rsquo;: vector_index_arn<br>
+},<br>
+&rsquo;type&rsquo;: &lsquo;S3_VECTORS&rsquo;<br>
+}<br>
+)</p>
+<p>Vai trò được gắn với knowledge base nên có một số chính sách được đính kèm, bao gồm quyền truy cập vào API S3 Vectors, các mô hình được sử dụng để nhúng, tạo và xếp hạng lại (nếu được sử dụng), và bucket S3 được sử dụng làm nguồn dữ liệu. Nếu bạn đang sử dụng khóa do khách hàng quản lý cho S3 Vector làm kho lưu trữ véc-tơ, bạn sẽ cần cung cấp một chính sách bổ sung để cho phép giải mã dữ liệu. Sau đây là chính sách cần thiết để truy cập Amazon S3 Vector làm kho lưu trữ véc-tơ:</p>
+<p>code Code<br>
+downloadcontent_copy<br>
+expand_less<br>
+{<br>
+&ldquo;Version&rdquo;: &ldquo;2012-10-17&rdquo;,<br>
+&ldquo;Statement&rdquo;: [<br>
+{<br>
+&ldquo;Sid&rdquo;: &ldquo;BedrockInvokeModelPermission&rdquo;,<br>
+&ldquo;Effect&rdquo;: &ldquo;Allow&rdquo;,<br>
+&ldquo;Action&rdquo;: [<br>
+&ldquo;bedrock:InvokeModel&rdquo;<br>
+],<br>
+&ldquo;Resource&rdquo;: [<br>
+&ldquo;arn:aws:bedrock:{REGION}::foundation-model/amazon.titan-embed-text-v2:0&rdquo;<br>
+]<br>
+},<br>
+{<br>
+&ldquo;Sid&rdquo;: &ldquo;KmsPermission&rdquo;,<br>
+&ldquo;Effect&rdquo;: &ldquo;Allow&rdquo;,<br>
+&ldquo;Action&rdquo;: [<br>
+&ldquo;kms:GenerateDataKey&rdquo;,<br>
+&ldquo;kms:Decrypt&rdquo;<br>
+],<br>
+&ldquo;Resource&rdquo;: [<br>
+&ldquo;arn:aws:kms:{REGION}:{ACCOUNT_ID}:key/{KMS_KEY_ID}&rdquo;<br>
+]<br>
+},<br>
+{<br>
+&ldquo;Sid&rdquo;: &ldquo;S3ListBucketPermission&rdquo;,<br>
+&ldquo;Effect&rdquo;: &ldquo;Allow&rdquo;,<br>
+&ldquo;Action&rdquo;: [<br>
+&ldquo;s3:ListBucket&rdquo;<br>
+],<br>
+&ldquo;Resource&rdquo;: [<br>
+&ldquo;arn:aws:s3:::{SOURCE_BUCKET_NAME}&rdquo;<br>
+],<br>
+&ldquo;Condition&rdquo;: {<br>
+&ldquo;StringEquals&rdquo;: {<br>
+&ldquo;aws:ResourceAccount&rdquo;: [<br>
+&ldquo;{ACCOUNT_ID}&rdquo;<br>
+]<br>
+}<br>
+}<br>
+},<br>
+{<br>
+&ldquo;Sid&rdquo;: &ldquo;S3GetObjectPermission&rdquo;,<br>
+&ldquo;Effect&rdquo;: &ldquo;Allow&rdquo;,<br>
+&ldquo;Action&rdquo;: [<br>
+&ldquo;s3:GetObject&rdquo;<br>
+],<br>
+&ldquo;Resource&rdquo;: [<br>
+&ldquo;arn:aws:s3:::{SOURCE_BUCKET_NAME}/{PREFIX}/*&rdquo;<br>
+],<br>
+&ldquo;Condition&rdquo;: {<br>
+&ldquo;StringEquals&rdquo;: {<br>
+&ldquo;aws:ResourceAccount&rdquo;: [<br>
+&ldquo;{ACCOUNT_ID}&rdquo;<br>
+]<br>
+}<br>
+}<br>
+},<br>
+{<br>
+&ldquo;Sid&rdquo;: &ldquo;S3VectorsAccessPermission&rdquo;,<br>
+&ldquo;Effect&rdquo;: &ldquo;Allow&rdquo;,<br>
+&ldquo;Action&rdquo;: [<br>
+&ldquo;s3vectors:GetIndex&rdquo;,<br>
+&ldquo;s3vectors:QueryVectors&rdquo;,<br>
+&ldquo;s3vectors:PutVectors&rdquo;,<br>
+&ldquo;s3vectors:GetVectors&rdquo;,<br>
+&ldquo;s3vectors:DeleteVectors&rdquo;<br>
+],<br>
+&ldquo;Resource&rdquo;: &ldquo;arn:aws:s3vectors:{REGION}:{ACCOUNT_ID}:bucket/{VECTOR_BUCKET_NAME}/index/{VECTOR_INDEX_NAME}&rdquo;,<br>
+&ldquo;Condition&rdquo;: {<br>
+&ldquo;StringEquals&rdquo;: {<br>
+&ldquo;aws:ResourceAccount&rdquo;: &ldquo;{ACCOUNT_ID}&rdquo;<br>
+}<br>
+}<br>
+}<br>
+]<br>
+}</p>
+<h2 id="dọn-dẹp"><strong>Dọn dẹp</strong></h2>
+<p>Để dọn dẹp tài nguyên của bạn, hãy hoàn thành các bước sau. Để xóa knowledge base:</p>
+<ol>
+<li>Trên bảng điều khiển Amazon Bedrock, chọn <strong>Knowledge Bases</strong></li>
+<li>Chọn Knowledge Base của bạn và ghi lại cả tên vai trò dịch vụ IAM và ARN chỉ mục S3 Vector</li>
+<li>Chọn <strong>Delete</strong> và xác nhận</li>
+</ol>
+<p>Để xóa S3 Vector làm kho lưu trữ véc-tơ, hãy sử dụng các lệnh sau của <a href="https://aws.amazon.com/cli/">Giao diện dòng lệnh AWS</a> (AWS CLI):</p>
+<p>code Code<br>
+downloadcontent_copy<br>
+expand_less<br>
+aws s3vectors delete-index --vector-bucket-name YOUR_VECTOR_BUCKET_NAME --index-name YOUR_INDEX_NAME --region YOUR_REGION<br>
+aws s3vectors delete-vector-bucket --vector-bucket-name YOUR_VECTOR_BUCKET_NAME --region YOUR_REGION</p>
+<ol>
+<li>Trên bảng điều khiển IAM, tìm vai trò đã ghi chú trước đó</li>
+<li>Chọn và xóa vai trò</li>
+</ol>
+<p>Để xóa bộ dữ liệu mẫu:</p>
+<ol>
+<li>Trên bảng điều khiển Amazon S3, tìm bucket S3 của bạn</li>
+<li>Chọn và xóa các tệp bạn đã tải lên cho hướng dẫn này</li>
+</ol>
+<h2 id="kết-luận"><strong>Kết luận</strong></h2>
+<p>Sự tích hợp giữa Amazon Bedrock Knowledge Bases và Amazon S3 Vectors đại diện cho một bước tiến đáng kể trong việc làm cho các ứng dụng RAG trở nên dễ tiếp cận và khả thi về mặt kinh tế hơn ở quy mô lớn. Bằng cách sử dụng bộ lưu trữ được tối ưu hóa chi phí của Amazon S3 Vectors, các tổ chức giờ đây có thể xây dựng các cơ sở tri thức ở quy mô lớn với hiệu quả chi phí được cải thiện. Điều này có nghĩa là khách hàng có thể đạt được sự cân bằng tối ưu giữa hiệu suất và kinh tế, và bạn có thể tập trung vào việc tạo ra giá trị thông qua các ứng dụng do AI cung cấp thay vì quản lý cơ sở hạ tầng lưu trữ véc-tơ phức tạp.</p>
+<p>Để bắt đầu với việc tích hợp Amazon Bedrock Knowledge Bases và Amazon S3 Vectors, hãy tham khảo <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-vectors-bedrock-kb.html">Sử dụng S3 Vectors với Amazon Bedrock Knowledge Bases</a> trong Hướng dẫn sử dụng Amazon S3.</p>
+<hr>
+<h3 id="về-các-tác-giả"><strong>Về các tác giả</strong></h3>
+<p>![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-8.jpeg">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-8.jpeg</a>)</p>
+<p><strong>Vaibhav Sabharwal</strong> là một Kiến trúc sư Giải pháp Cấp cao của Amazon Web Services (AWS) có trụ sở tại New York. Anh đam mê học hỏi các công nghệ đám mây mới và hỗ trợ khách hàng xây dựng chiến lược áp dụng đám mây, thiết kế các giải pháp sáng tạo và thúc đẩy sự xuất sắc trong vận hành. Là một thành viên của Cộng đồng Kỹ thuật Dịch vụ Tài chính tại AWS, anh tích cực đóng góp vào các nỗ lực hợp tác trong ngành.<br>
+![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/12/09/ML-17210-dani.jpg">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/12/09/ML-17210-dani.jpg</a>)</p>
+<p><strong>Dani Mitchell</strong> là một Kiến trúc sư Giải pháp Chuyên gia về AI Tạo sinh tại Amazon Web Services (AWS). Anh tập trung vào việc giúp các doanh nghiệp trên toàn thế giới đẩy nhanh hành trình AI tạo sinh của họ với Amazon Bedrock.<br>
+![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-10-1.png">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/07/17/ml-19266-image-10-1.png</a>)</p>
+<p><strong>Irene Marban</strong> là một Kiến trúc sư Giải pháp Chuyên gia về AI Tạo sinh tại Amazon Web Services (AWS), làm việc với các khách hàng trên khắp EMEA để thiết kế và triển khai các giải pháp AI tạo sinh nhằm thúc đẩy hoạt động kinh doanh của họ. Với nền tảng về kỹ thuật y sinh và AI, công việc của cô tập trung vào việc giúp các tổ chức tận dụng các công nghệ AI mới nhất để thúc đẩy sự đổi mới và tăng trưởng. Khi rảnh rỗi, cô thích đọc sách và nấu ăn cho bạn bè.<br>
+![alt text](<a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2023/11/22/Ashish.jpg">https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2023/11/22/Ashish.jpg</a>)</p>
+<p><strong>Ashish Lal</strong> là Giám đốc Tiếp thị Sản phẩm Cấp cao về AI/ML cho Amazon Bedrock. Anh có hơn 11 năm kinh nghiệm trong lĩnh vực tiếp thị sản phẩm và thích giúp khách hàng đẩy nhanh thời gian tạo ra giá trị và giảm chi phí vòng đời AI của họ.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../../vi/3-blogstranslated/" title="Các bài blogs đã dịch"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../../vi/3-blogstranslated/3.2-blog2/" title="Blog 2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1765294005"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1765294005"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1765294005"></script>
+    <script src="../../../js/jquery.sticky.js?1765294005"></script>
+    <script src="../../../js/featherlight.min.js?1765294005"></script>
+    <script src="../../../js/highlight.pack.js?1765294005"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1765294005"></script>
+    <script src="../../../js/learn.js?1765294005"></script>
+    <script src="../../../js/hugo-learn.js?1765294005"></script>
+
+    <link href="../../../mermaid/mermaid.css?1765294005" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1765294005"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>
