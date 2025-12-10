@@ -81,7 +81,7 @@ Throughout the internship period, I participated in 7 significant events, each p
 
 ### [Event 6](4.6-Event6/)
 
-**Event Name:** AWS Security Specialty Workshop
+**Event Name:** AWS Cloud Mastery Series #3: Security (AWS Well-Architected Security Pillar)
 
 **Date & Time:** Saturday, November 29, 2025
 

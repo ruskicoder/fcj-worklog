@@ -81,7 +81,7 @@ Trong suốt quá trình thực tập, tôi đã tham gia 7 sự kiện quan tr�
 
 ### [Event 6](4.6-Event6/)
 
-**Tên sự kiện:** AWS Security Specialty Workshop
+**Tên sự kiện:** AWS Cloud Mastery Series #3: Security (AWS Well-Architected Security Pillar)
 
 **Thời gian:** Thứ Bảy, ngày 29 tháng 11 năm 2025
 

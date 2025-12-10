@@ -1,17 +1,17 @@
----
+﻿---
 title: "Event 6"
 weight: 6
 chapter: false
 pre: " <b> 4.6. </b> "
 ---
 
-# ** AWS Security Specialty Workshop**
+# **AWS Cloud Mastery Series #3: Security (AWS Well-Architected Security Pillar)**
 
 **Địa điểm**: AWS Event Hall, L26 Bitexco Tower, HCMC
 
-**Thời gian**:Thứ Bảy, ngày 29 tháng 11 năm 2025
+**Thời gian**: Thứ Bảy, ngày 29 tháng 11 năm 2025
 
-# Bài thu hoạch “AWS Security Specialty Workshop”
+# Bài thu hoạch "AWS Cloud Mastery Series #3: Security"
 
 ### Mục Đích Của Sự Kiện
 

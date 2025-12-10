@@ -5,13 +5,13 @@ chapter: false
 pre: " <b> 4.6. </b> "
 ---
 
-# **AWS Security Specialty Workshop**
+# **AWS Cloud Mastery Series #3: Security (AWS Well-Architected Security Pillar)**
 
 **Location**: AWS Event Hall, L26 Bitexco Tower, HCMC
 
 **Date**: Saturday, November 29, 2025
 
-# Learning Report: "AWS Security Specialty Workshop"
+# Learning Report: "AWS Cloud Mastery Series #3: Security"
 
 ### Event Objectives
 
